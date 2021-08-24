@@ -12,9 +12,9 @@
     flake-utils.lib.eachDefaultSystem 
       (system: 
         let 
-          pkgs = import ./pynixify/nixpkgs.nix {inherit nixpkgs system; };
+          pkgs = import ./pynixify/nixpkgs.nix {inherit system; };
           pybit = pkgs.python3Packages.pybit;
-          devShell = import ./pynixify/shell.nix {nixpkgs = pkgs; };
+          devShell = import ./pynixify/shell.nix { };
         in
           {
             packages = flake-utils.lib.flattenTree {
