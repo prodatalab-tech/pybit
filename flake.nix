@@ -20,7 +20,7 @@
             packages = flake-utils.lib.flattenTree {
               inherit pybit;
             };
-            defaultPackage = self.packages.pybit;
+            defaultPackage = pybit;
             inherit devShell;
           }
       );
