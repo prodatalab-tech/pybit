@@ -22,6 +22,7 @@
             };
             defaultPackage = pybit;
             inherit devShell;
+            legacyPackages = pkgs;
           }
       );
 }
